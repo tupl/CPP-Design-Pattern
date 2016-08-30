@@ -1,10 +1,10 @@
 /**
- * \brief
- *
- *
- *
- *
- *
+ * \brief This is a fun project that show a used case for Builder Pattern
+ * Generally, Builder pattern can be think like we have abstract interface
+ * for all of our object. To create an object, we dont want to initialize
+ * it since it mays have a very complex initialized parameter. One way to
+ * do it is to create a Builder. Each builder responsible for some type of
+ * object.
  */
 #include <iostream>
 
