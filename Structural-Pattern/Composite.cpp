@@ -1,13 +1,16 @@
 /*
-Idea of Composite is to represent object like a tree. This practice is used
++ Purpose: Idea of Composite is to represent object like a tree. This practice is used
 in drawing object. The idea is top-down expand with different component.
 However, it has to share the same basic interface. It's should recursively work
 on it and expands it gradually. It's combination of Primitive and Composition.
 When we expands the object, we expands it with top down approach.
 
-Procedure:
++ Procedure:
 - Define a base functionalities, called 'Primitive'
 - Define composition functionalities, called 'Compositive'
+
++ Reference:
+- https://sourcemaking.com/design_patterns/structural_patterns
 */
 #include <string>
 #include <iostream>
