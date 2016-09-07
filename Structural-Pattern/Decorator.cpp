@@ -14,6 +14,9 @@ bottom-up approach.
 - Human with gun
 - Human with handknife
 - Human with both gun and handknife
+
++ Reference:
+- https://sourcemaking.com/design_patterns/structural_patterns
 */
 #include <string>
 #include <iostream>
