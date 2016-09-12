@@ -18,13 +18,33 @@ class CallQueue {
     std::map<int, std::queue<Call>> _calls;
     CallQueue() {}
  public:
-    Call getNextCall(int level);
+    static CallQueue& instance() {
+        static cQueue = CallQueue();
+        return cQueue;
+    }
+
+    Call getNextCall(int level) {
+        if (!_calls[level].empty()) {
+            Call c = _calls[level].front();
+            _calls[level].pop();
+            return c;
+        }
+        return nullptr;
+    }
 
     void putCall(Call& c) {
         _calls[c.level].push(c);
     }
 
     void dispatchCall(Call &c) {
-
+        int currentLevel = _levels[c.level];
+        for(int i = 0; i < currentLevel.size(); ++i) {
+            int employee = currentLevel[i];
+            if (employee.isFree()) {
+                employee.handleCall(c);
+                return;
+            }
+        }
+        putCall(c);
     }
 };
