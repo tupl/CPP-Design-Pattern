@@ -3,6 +3,7 @@
 
 // https://leetcode.com/problems/combination-sum-ii/
 // keep track of previous character
+// allow for repeated one number
 
 class Solution {
 public:
