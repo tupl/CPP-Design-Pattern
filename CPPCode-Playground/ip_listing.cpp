@@ -6,11 +6,18 @@
 using namespace std;
 
 // 93. Restore IP Addresses - Leet Code
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <iostream>
+using namespace std;
 
 class Solution {
 public:
 
     bool valid(string& s) {
+        if (s[0] == '0' && s.size() > 1) return false;
         if (s.size() < 3) return true; // 1, 2 character
         if (s.size() > 3) return false; // not more than 3
         // 3 character now
@@ -35,6 +42,7 @@ public:
             }
             return;
         }
+        
         int n = s.size();
         for(int i = 1; i <= 3 && st + i <= n ; ++i) {
             string tmp = s.substr(st, i);
